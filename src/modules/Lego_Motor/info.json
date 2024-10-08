@@ -1,0 +1,10 @@
+{
+  "author": "WMB",
+  "version": "0.1.0",
+    "name": "Lego_Motor",
+  "description": "Device plugin for Lego Large/Medium Motor",
+  "type": [
+    "LEGO.EV3.LargeMotor",
+    "LEGO.EV3.MediumMotor"
+  ]
+}

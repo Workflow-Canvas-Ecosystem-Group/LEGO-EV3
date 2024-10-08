@@ -1,0 +1,9 @@
+{
+  "author": "WMB",
+  "version": "0.1.0",
+  "name": "Lego_Light",
+  "description": "Device plugin for LegoLight",
+  "type": [
+    "LEGO.EV3.Sensor.Light"
+  ]
+}

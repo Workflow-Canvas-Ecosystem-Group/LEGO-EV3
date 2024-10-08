@@ -1,0 +1,9 @@
+{
+  "author": "WMB",
+  "version": "0.1.0",
+  "name": "Lego_Sound",
+  "description": "Device plugin for LegoSound",
+  "type": [
+    "LEGO.EV3.Sound"
+  ]
+}
