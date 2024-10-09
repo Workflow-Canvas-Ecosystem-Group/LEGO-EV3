@@ -62,7 +62,7 @@ class RequestHandler(BaseHTTPRequestHandler):
                 response_content = handler(params)
                 response = {
                     "code": 0,
-                    "description": "",
+                    "description": "success",
                     "data": response_content
                 }
             except Exception as e:
@@ -109,10 +109,15 @@ def process(params):
     return json.dumps(data)
 
 
+def info(params):
+    return "ev3-wfc"
+
+
 def run(server_class=HTTPServer, handler_class=RequestHandler):
     router = Router()
-    router.add_route('/', 'GET', process)
-    router.add_route('/', 'POST', process)
+    router.add_route('/', 'GET', info)
+    router.add_route('/ev3', 'GET', process)
+    # router.add_route('/ev3', 'POST', process)
 
     handler_class.router = router  # 将router赋值给RequestHandler类的router变量
 
