@@ -26,7 +26,7 @@ After=network.target
 
 [Service]
 Type=simple
-User=gtf
+User=robot
 ExecStart=/usr/bin/python3 /home/robot/ev3-wfc/src/main.py
 WorkingDirectory=/home/robot/ev3-wfc-server/src
 Restart=always
