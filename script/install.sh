@@ -8,11 +8,11 @@ curl -sS -L $download_url > ./ev3-wfc.tar
 
 tar -xf ev3-wfc.tar
 
-# Search "Workflow*" folder and rename to  ev3-wfc
+# Search "Workflow*" folder and rename to  /home/robot/ev3-wfc
 target_folder=$(find . -type d -name 'Workflow*' -print -quit)
 
 if [ -n "$target_folder" ]; then
-    mv "$target_folder" ev3-wfc
+    mv "$target_folder" /home/robot/ev3-wfc
     echo "Renamed '$target_folder' to 'ev3-wfc'"
 else
     echo "No folder starting with 'Workflow' found."
@@ -28,7 +28,7 @@ After=network.target
 Type=simple
 User=robot
 ExecStart=/usr/bin/python3 /home/robot/ev3-wfc/src/main.py
-WorkingDirectory=/home/robot/ev3-wfc-server/src
+WorkingDirectory=/home/robot/ev3-wfc/src
 Restart=always
 
 [Install]
